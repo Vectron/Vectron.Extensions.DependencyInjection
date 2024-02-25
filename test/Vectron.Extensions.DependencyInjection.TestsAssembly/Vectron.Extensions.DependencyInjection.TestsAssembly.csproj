@@ -1,0 +1,7 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\Vectron.Extensions.DependencyInjection.Abstraction\Vectron.Extensions.DependencyInjection.Abstraction.csproj" />
+  </ItemGroup>
+  
+</Project>

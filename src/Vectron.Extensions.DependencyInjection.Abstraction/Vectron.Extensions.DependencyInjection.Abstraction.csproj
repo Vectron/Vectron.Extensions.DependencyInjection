@@ -2,7 +2,6 @@
   
   <PropertyGroup>
     <Description>Abstraction project for auto dependency injection</Description>
-    <RootNamespace>VectronsLibrary.DI</RootNamespace>
   </PropertyGroup>
   
 </Project>

@@ -12,8 +12,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\DI.TestsAssembly\VectronsLibrary.DI.TestsAssembly.csproj" />
-    <ProjectReference Include="..\DI\VectronsLibrary.DI.csproj" />
+    <ProjectReference Include="..\..\src\Vectron.Extensions.DependencyInjection\Vectron.Extensions.DependencyInjection.csproj" />
+    <ProjectReference Include="..\Vectron.Extensions.DependencyInjection.TestsAssembly\Vectron.Extensions.DependencyInjection.TestsAssembly.csproj" />
   </ItemGroup>
   
 </Project>
