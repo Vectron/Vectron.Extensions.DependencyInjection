@@ -40,6 +40,16 @@ jobs:
       dotnet_version: 8.0.x
       solution_file: Vectron.Extensions.DependencyInjection.sln
 
+  call-deploy-preview:
+    needs: call-build-test
+    permissions:
+      packages: write
+    uses: Vectron/GithubWorkflows/.github/workflows/DeployNugetGithub.yml@main
+    with:
+      os: ubuntu-latest
+      dotnet_version: 8.0.x
+      solution_file: Vectron.Extensions.DependencyInjection.sln
+
   call-deploy-abstraction:
     if: contains(github.ref, 'refs/tags/Abstraction-v')
     needs: call-build-test
