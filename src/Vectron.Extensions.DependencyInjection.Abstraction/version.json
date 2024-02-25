@@ -3,5 +3,8 @@
   "pathFilters": [
     "."
   ],
+  "release": {
+    "tagName": "Abstraction-v{version}"
+  },
   "inherit": true
 }

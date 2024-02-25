@@ -40,7 +40,8 @@ jobs:
       dotnet_version: 8.0.x
       solution_file: Vectron.Extensions.DependencyInjection.sln
 
-  call-deploy:
+  call-deploy-abstraction:
+    if: contains(github.ref, 'refs/tags/Abstraction-v')
     needs: call-build-test
     permissions:
       packages: write
@@ -48,7 +49,20 @@ jobs:
     with:
       os: ubuntu-latest
       dotnet_version: 8.0.x
-      solution_file: Vectron.Extensions.DependencyInjection.sln
+      solution_file: src/Vectron.Extensions.DependencyInjection.Abstraction/Vectron.Extensions.DependencyInjection.Abstraction.csproj
+    secrets:
+      NUGET_KEY: ${{ secrets.NUGET_KEY }}
+
+  call-deploy-di:
+    if: contains(github.ref, 'refs/tags/DI-v')
+    needs: call-build-test
+    permissions:
+      packages: write
+    uses: Vectron/GithubWorkflows/.github/workflows/DeployNugetGithub.yml@main
+    with:
+      os: ubuntu-latest
+      dotnet_version: 8.0.x
+      solution_file: src/Vectron.Extensions.DependencyInjection/Vectron.Extensions.DependencyInjection.csproj
     secrets:
       NUGET_KEY: ${{ secrets.NUGET_KEY }}
       

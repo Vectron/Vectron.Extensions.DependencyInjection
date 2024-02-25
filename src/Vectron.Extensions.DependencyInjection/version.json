@@ -3,5 +3,8 @@
   "pathFilters": [
     "."
   ],
+  "release": {
+    "tagName": "DI-v{version}"
+  },
   "inherit": true
 }
