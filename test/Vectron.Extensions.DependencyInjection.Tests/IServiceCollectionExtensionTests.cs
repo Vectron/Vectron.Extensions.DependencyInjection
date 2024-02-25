@@ -133,7 +133,7 @@ public class IServiceCollectionExtensionTests
         // Assert
         Assert.AreEqual(1, collection.Count);
         ValidateServiceDescriptor(collection[0], ServiceLifetime.Singleton, typeof(ILogger), null!);
-        _ = Assert.ThrowsException<NotImplementedException>(() => provider.GetService<ILogger>());
+        _ = Assert.ThrowsException<NotSupportedException>(() => provider.GetService<ILogger>());
     }
 
     /// <summary>
