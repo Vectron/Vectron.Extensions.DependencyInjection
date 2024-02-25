@@ -1,6 +1,5 @@
 using Microsoft.Extensions.DependencyInjection;
 using Vectron.Extensions.DependencyInjection.Attributes;
-using Vectron.Extensions.DependencyInjection.Extensions;
 
 namespace Vectron.Extensions.DependencyInjection;
 

@@ -3,12 +3,8 @@ using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Logging.Abstractions;
 using Vectron.Extensions.DependencyInjection;
 using Vectron.Extensions.DependencyInjection.Attributes;
-using Vectron.Extensions.DependencyInjection.Extensions;
-
-#pragma warning disable IDE0130 // Namespace does not match folder structure
 
 namespace Microsoft.Extensions.DependencyInjection;
-#pragma warning restore IDE0130 // Namespace does not match folder structure
 
 /// <summary>
 /// Extensions for <see cref="IServiceCollection"/>.
