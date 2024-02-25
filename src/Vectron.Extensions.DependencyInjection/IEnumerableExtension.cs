@@ -10,7 +10,7 @@ internal static class IEnumerableExtension
     /// </summary>
     /// <typeparam name="T">The type of the object.</typeparam>
     /// <param name="enumerable">The <see cref="IEnumerable{T}"/> to remove null items from.</param>
-    /// <returns>The source <see cref="IEnumerable{T}"/> without <c>null</c> values.</returns>
+    /// <returns>The source <see cref="IEnumerable{T}"/> without <see langword="null"/> values.</returns>
     public static IEnumerable<T> WhereNotNull<T>(this IEnumerable<T?> enumerable)
         where T : class
     {
