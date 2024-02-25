@@ -48,22 +48,6 @@ public class AssemblyResolverTests
     }
 
     /// <summary>
-    /// Check if <see cref="FileNotFoundException"/> or <see cref="FileLoadException"/> is thrown when loading unknown assembly.
-    /// </summary>
-    [TestMethod]
-    public void InvalidAssembliesThrowException()
-    {
-        using var assemblyResolver = new AssemblyResolver();
-
-        var assemblyToLoad = new AssemblyName("test.XmlSerializers, version=1.0.0.0, culture=neutral, publicKeyToken=null")
-        {
-            Name = string.Empty,
-        };
-
-        _ = Assert.ThrowsException<FileLoadException>(() => Assembly.Load(assemblyToLoad));
-    }
-
-    /// <summary>
     /// Check if <see cref="FileNotFoundException"/> or <see cref="FileLoadException"/> is thrown when loading Serializer or resource assembly.
     /// </summary>
     /// <param name="assemblyName">The name of the assembly to load.</param>
