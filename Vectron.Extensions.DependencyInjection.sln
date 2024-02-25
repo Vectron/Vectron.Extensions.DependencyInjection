@@ -33,6 +33,12 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".github", ".github", "{DDCE
 		.github\release.yml = .github\release.yml
 	EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "workflows", "workflows", "{C774F626-C057-4024-8E99-12A9AD9EDE14}"
+	ProjectSection(SolutionItems) = preProject
+		.github\workflows\BuildTestDeploy.yml = .github\workflows\BuildTestDeploy.yml
+		.github\workflows\DependabotAutoMerge.yml = .github\workflows\DependabotAutoMerge.yml
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -64,6 +70,7 @@ Global
 		{C3670A00-985E-4B4A-8A25-91EAC20BB8A3} = {C57F9FB9-36A9-4F4E-B351-14CC2B3F5839}
 		{18E8C921-A89A-4EBD-9EDC-3AC1ABCAA833} = {21D79A61-08D7-4C8E-BCD0-52B15D268154}
 		{5195DDF2-D0C4-4498-99C7-5F2A993404A3} = {21D79A61-08D7-4C8E-BCD0-52B15D268154}
+		{C774F626-C057-4024-8E99-12A9AD9EDE14} = {DDCE45B0-8B56-4A63-85B4-4DB9884607AD}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {758D1C72-A486-4961-B557-2861530C6396}
