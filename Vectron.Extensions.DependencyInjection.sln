@@ -6,6 +6,10 @@ MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{C57F9FB9-36A9-4F4E-B351-14CC2B3F5839}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{21D79A61-08D7-4C8E-BCD0-52B15D268154}"
+	ProjectSection(SolutionItems) = preProject
+		test\.editorconfig = test\.editorconfig
+		test\Directory.Build.props = test\Directory.Build.props
+	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Vectron.Extensions.DependencyInjection", "src\Vectron.Extensions.DependencyInjection\Vectron.Extensions.DependencyInjection.csproj", "{E9F1AC74-0C72-4C98-BBD4-724DE6A7E52B}"
 EndProject
