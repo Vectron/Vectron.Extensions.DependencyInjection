@@ -1,5 +1,3 @@
-using System;
-
 namespace VectronsLibrary.DI.Attributes;
 
 /// <summary>
