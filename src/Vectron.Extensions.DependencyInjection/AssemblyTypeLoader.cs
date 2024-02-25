@@ -23,9 +23,12 @@ public static partial class AssemblyTypeLoader
                 codeBase = Assembly.GetExecutingAssembly().Location;
             }
 
-            var uri = new UriBuilder(codeBase);
-            var path = Uri.UnescapeDataString(uri.Path);
-            return Path.GetDirectoryName(path) ?? string.Empty;
+            if (string.IsNullOrEmpty(codeBase))
+            {
+                return Directory.GetCurrentDirectory();
+            }
+
+            return Path.GetDirectoryName(codeBase) ?? string.Empty;
         }
     }
 
