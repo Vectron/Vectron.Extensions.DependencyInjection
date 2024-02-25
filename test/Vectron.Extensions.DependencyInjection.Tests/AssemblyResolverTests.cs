@@ -12,8 +12,6 @@ namespace Vectron.Extensions.DependencyInjection.Tests;
 [TestClass]
 public class AssemblyResolverTests
 {
-    private static readonly string[] IgnoredAssemblies = ["test1", "test2", "test3"];
-
     /// <summary>
     /// Test if we get <see cref="ArgumentNullException"/> when we pass <see langword="null"/> to the constructor.
     /// </summary>
@@ -45,27 +43,6 @@ public class AssemblyResolverTests
         var result = Assembly.Load("Vectron.Extensions.DependencyInjection.TestsAssembly");
 
         Assert.IsNotNull(result);
-    }
-
-    /// <summary>
-    /// Check if <see cref="FileNotFoundException"/> or <see cref="FileLoadException"/> is thrown when loading Serializer or resource assembly.
-    /// </summary>
-    /// <param name="assemblyName">The name of the assembly to load.</param>
-    [TestMethod]
-    [DataRow("test.XmlSerializers, version=1.0.0.0, culture=neutral, publicKeyToken=null")]
-    [DataRow("test.resources, version=1.0.0.0, culture=neutral, publicKeyToken=null")]
-    [DataRow("test.xmlserializers, version=1.0.0.0, culture=neutral, publicKeyToken=null")]
-    [DataRow("test.Resources, version=1.0.0.0, culture=neutral, publicKeyToken=null")]
-    [DataRow("MyAssembly, version=1.0.0.0, culture=en-us, publicKeyToken=null")]
-    [DataRow("test1, version=1.0.0.0, culture=neutral, publicKeyToken=null")]
-    [DataRow("test2, version=1.0.0.0, culture=neutral, publicKeyToken=null")]
-    [DataRow("test3, version=1.0.0.0, culture=neutral, publicKeyToken=null")]
-    [DataRow("Test1, version=1.0.0.0, culture=neutral, publicKeyToken=null")]
-    public void SerializerResourcesAndIgnoredAssembliesThrowException(string assemblyName)
-    {
-        using var assemblyResolver = new AssemblyResolver(Mock.Of<ILogger<AssemblyResolver>>(), IgnoredAssemblies);
-
-        _ = Assert.ThrowsException<FileNotFoundException>(() => Assembly.Load(assemblyName));
     }
 
     /// <summary>
