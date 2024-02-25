@@ -1,9 +1,10 @@
 using System.Reflection;
+using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
 
-namespace VectronsLibrary.DI.Tests;
+namespace Vectron.Extensions.DependencyInjection.Tests;
 
 /// <summary>
 /// Test methods for <see cref="AssemblyResolver"/>.
@@ -41,7 +42,7 @@ public class AssemblyResolverTests
     {
         using var assemblyResolver = new AssemblyResolver(Mock.Of<ILogger<AssemblyResolver>>(), [], [string.Empty, null!]);
 
-        var result = Assembly.Load("VectronsLibrary.DI.TestsAssembly");
+        var result = Assembly.Load("Vectron.Extensions.DependencyInjection.TestsAssembly");
 
         Assert.IsNotNull(result);
     }
@@ -94,7 +95,7 @@ public class AssemblyResolverTests
     {
         using var assemblyResolver = new AssemblyResolver();
 
-        var result = Assembly.Load("VectronsLibrary.DI.TestsAssembly");
+        var result = Assembly.Load("Vectron.Extensions.DependencyInjection.TestsAssembly");
 
         Assert.IsNotNull(result);
     }

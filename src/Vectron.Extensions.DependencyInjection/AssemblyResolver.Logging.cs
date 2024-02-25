@@ -1,6 +1,6 @@
 using Microsoft.Extensions.Logging;
 
-namespace VectronsLibrary.DI;
+namespace Microsoft.Extensions.DependencyInjection;
 
 /// <content>
 /// The logging methods.

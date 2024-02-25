@@ -1,4 +1,4 @@
-namespace VectronsLibrary.DI;
+namespace Vectron.Extensions.DependencyInjection;
 
 /// <summary>
 /// A collection of all the types that inherit from <typeparamref name="T"/>.

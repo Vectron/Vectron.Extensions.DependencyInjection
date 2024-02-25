@@ -1,7 +1,7 @@
 using Microsoft.Extensions.Logging;
-using VectronsLibrary.DI.Attributes;
+using Vectron.Extensions.DependencyInjection.Attributes;
 
-namespace VectronsLibrary.DI.BufferedLogging;
+namespace Vectron.Extensions.DependencyInjection.BufferedLogging;
 
 /// <summary>
 /// A buffered logger factory to create multiple log buffers to dump to Ilogger later.

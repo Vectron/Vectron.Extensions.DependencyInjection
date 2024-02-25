@@ -3,7 +3,7 @@ using System.Text;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Logging.Abstractions;
 
-namespace VectronsLibrary.DI;
+namespace Microsoft.Extensions.DependencyInjection;
 
 /// <summary>
 /// Helper class for getting assembly data.

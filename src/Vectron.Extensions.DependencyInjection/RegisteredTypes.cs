@@ -1,8 +1,8 @@
 using Microsoft.Extensions.DependencyInjection;
-using VectronsLibrary.DI.Attributes;
-using VectronsLibrary.DI.Extensions;
+using Vectron.Extensions.DependencyInjection.Attributes;
+using Vectron.Extensions.DependencyInjection.Extensions;
 
-namespace VectronsLibrary.DI;
+namespace Vectron.Extensions.DependencyInjection;
 
 /// <summary>
 /// The default implementation of <see cref="IRegisteredTypes{T}"/>.

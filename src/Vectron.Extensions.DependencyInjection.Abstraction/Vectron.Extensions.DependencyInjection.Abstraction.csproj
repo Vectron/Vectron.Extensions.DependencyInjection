@@ -2,6 +2,7 @@
   
   <PropertyGroup>
     <Description>Abstraction project for auto dependency injection</Description>
+    <DefaultNamespace>Vectron.Extensions.DependencyInjection</DefaultNamespace>
   </PropertyGroup>
   
 </Project>

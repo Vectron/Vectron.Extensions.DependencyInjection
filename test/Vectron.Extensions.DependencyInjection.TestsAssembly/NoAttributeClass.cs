@@ -1,4 +1,4 @@
-namespace VectronsLibrary.DI.TestsAssembly;
+namespace Vectron.Extensions.DependencyInjection.TestsAssembly;
 
 /// <summary>
 /// A <see cref="IAttributeClass"/> without any attributes attached.

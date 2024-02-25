@@ -1,4 +1,4 @@
-namespace VectronsLibrary.DI.Extensions;
+namespace Vectron.Extensions.DependencyInjection.Extensions;
 
 /// <summary>
 /// Extensions for <see cref="IEnumerable{Type}"/>.

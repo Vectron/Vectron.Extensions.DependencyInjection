@@ -1,6 +1,6 @@
-using VectronsLibrary.DI.Attributes;
+using Vectron.Extensions.DependencyInjection.Attributes;
 
-namespace VectronsLibrary.DI.TestsAssembly;
+namespace Vectron.Extensions.DependencyInjection.TestsAssembly;
 
 /// <summary>
 /// A <see cref="IAttributeClass"/> with  <see cref="SingletonAttribute"/> attached.

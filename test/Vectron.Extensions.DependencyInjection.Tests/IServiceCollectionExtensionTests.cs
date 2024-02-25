@@ -1,9 +1,9 @@
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using VectronsLibrary.DI.TestsAssembly;
+using Vectron.Extensions.DependencyInjection.TestsAssembly;
 
-namespace VectronsLibrary.DI.Tests;
+namespace Vectron.Extensions.DependencyInjection.Tests;
 
 /// <summary>
 /// Tests for the <see cref="IServiceCollectionExtension"/>.
@@ -107,7 +107,7 @@ public class IServiceCollectionExtensionTests
         var collection = new ServiceCollection();
         var assemblies = new List<string>()
         {
-            "VectronsLibrary.DI.TestsAssembly.dll",
+            "Vectron.Extensions.DependencyInjection.TestsAssembly.dll",
         };
 
         // Act

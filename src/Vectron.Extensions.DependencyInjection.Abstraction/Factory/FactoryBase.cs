@@ -1,4 +1,4 @@
-namespace VectronsLibrary.DI.Factory;
+namespace Vectron.Extensions.DependencyInjection.Factory;
 
 /// <summary>
 /// Base class for making custom factories.

@@ -1,7 +1,8 @@
 using System.Reflection;
+using Microsoft.Extensions.DependencyInjection;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace VectronsLibrary.DI.Tests;
+namespace Vectron.Extensions.DependencyInjection.Tests;
 
 /// <summary>
 /// Test for the <see cref="AssemblyTypeLoader"/> class.

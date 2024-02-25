@@ -2,7 +2,7 @@ using System.Diagnostics.CodeAnalysis;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace VectronsLibrary.DI.Tests;
+namespace Vectron.Extensions.DependencyInjection.Tests;
 
 /// <summary>
 /// Tests for the <see cref="RegisteredTypes{T}"/> class.

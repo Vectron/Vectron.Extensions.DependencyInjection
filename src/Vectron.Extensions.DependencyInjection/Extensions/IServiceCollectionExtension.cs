@@ -1,13 +1,13 @@
 using System.Reflection;
-using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Logging.Abstractions;
-using VectronsLibrary.DI.Attributes;
-using VectronsLibrary.DI.Extensions;
+using Vectron.Extensions.DependencyInjection;
+using Vectron.Extensions.DependencyInjection.Attributes;
+using Vectron.Extensions.DependencyInjection.Extensions;
 
 #pragma warning disable IDE0130 // Namespace does not match folder structure
 
-namespace VectronsLibrary.DI;
+namespace Microsoft.Extensions.DependencyInjection;
 #pragma warning restore IDE0130 // Namespace does not match folder structure
 
 /// <summary>

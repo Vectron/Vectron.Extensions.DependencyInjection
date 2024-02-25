@@ -1,4 +1,4 @@
-namespace VectronsLibrary.DI.Factory;
+namespace Vectron.Extensions.DependencyInjection.Factory;
 
 /// <summary>
 /// A factory that can be used to resolve implementation of <typeparamref name="T"/>.

@@ -1,6 +1,6 @@
-using VectronsLibrary.DI.Attributes;
+using Vectron.Extensions.DependencyInjection.Attributes;
 
-namespace VectronsLibrary.DI.Extensions;
+namespace Vectron.Extensions.DependencyInjection.Extensions;
 
 /// <summary>
 /// Extensions for <see cref="IEnumerable{Type}"/>.

@@ -1,9 +1,10 @@
 using System.Collections.Concurrent;
 using System.Reflection;
 using Microsoft.Extensions.Logging;
-using VectronsLibrary.DI.Attributes;
+using Vectron.Extensions.DependencyInjection;
+using Vectron.Extensions.DependencyInjection.Attributes;
 
-namespace VectronsLibrary.DI;
+namespace Microsoft.Extensions.DependencyInjection;
 
 /// <summary>
 /// Default implementation of <see cref="IAssemblyResolver"/>.
@@ -21,7 +22,7 @@ public partial class AssemblyResolver : IAssemblyResolver, IDisposable
     /// Initializes a new instance of the <see cref="AssemblyResolver"/> class.
     /// </summary>
     public AssemblyResolver()
-        : this(Microsoft.Extensions.Logging.Abstractions.NullLogger<AssemblyResolver>.Instance)
+        : this(Logging.Abstractions.NullLogger<AssemblyResolver>.Instance)
     {
     }
 

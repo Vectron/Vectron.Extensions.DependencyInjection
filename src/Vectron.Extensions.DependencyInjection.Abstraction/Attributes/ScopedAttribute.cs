@@ -1,4 +1,4 @@
-namespace VectronsLibrary.DI.Attributes;
+namespace Vectron.Extensions.DependencyInjection.Attributes;
 
 /// <summary>
 /// Attribute indicating the type should be registered as scoped by automatic dependency scanning.

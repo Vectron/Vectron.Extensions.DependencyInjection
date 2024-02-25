@@ -1,4 +1,4 @@
-namespace VectronsLibrary.DI.Attributes;
+namespace Vectron.Extensions.DependencyInjection.Attributes;
 
 /// <summary>
 /// Attribute indicating the type should be skipped by automatic dependency scanning.
