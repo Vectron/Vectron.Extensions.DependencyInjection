@@ -42,6 +42,7 @@ jobs:
       solution_file: Vectron.Extensions.DependencyInjection.sln
 
   call-deploy-preview:
+    if: ${{!contains(github.ref, 'refs/tags/')}}
     needs: call-build-test
     permissions:
       packages: write
