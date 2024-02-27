@@ -35,51 +35,41 @@ jobs:
     strategy:
       matrix:
         os: [ ubuntu-latest, windows-latest, macos-latest ]
+      fail-fast: true
     uses: Vectron/GithubWorkflows/.github/workflows/BuildAndTest.yml@main
     with:
       os: ${{ matrix.os }}
-      dotnet_version: 8.0.x
+      dotnet_version: |
+        6.0.x
+        7.0.x
+        8.0.x
       solution_file: Vectron.Extensions.DependencyInjection.sln
 
-  call-deploy-preview:
-    if: ${{!contains(github.ref, 'refs/tags/')}}
+  call-deploy:
     needs: call-build-test
+    strategy:
+      matrix:
+        include:
+          - project: Vectron.Extensions.DependencyInjection.sln
+            condition: ${{ github.ref == 'refs/heads/main' }}
+          - project: src/Vectron.Extensions.DependencyInjection.Abstraction/Vectron.Extensions.DependencyInjection.Abstraction.csproj
+            condition: ${{ startsWith(github.ref, 'refs/tags/Abstraction-v') }}
+          - project: src/Vectron.Extensions.DependencyInjection/Vectron.Extensions.DependencyInjection.csproj
+            condition: ${{ startsWith(github.ref, 'refs/tags/DI-v') }}
+      fail-fast: true
     permissions:
       packages: write
     uses: Vectron/GithubWorkflows/.github/workflows/DeployNugetGithub.yml@main
     with:
       os: ubuntu-latest
-      dotnet_version: 8.0.x
-      solution_file: Vectron.Extensions.DependencyInjection.sln
+      dotnet_version: |
+        6.0.x
+        7.0.x
+        8.0.x
+      solution_file: ${{ matrix.project }}
+      run_condition: ${{ matrix.condition }}
     secrets:
       NUGET_KEY: ${{ secrets.NUGET_KEY }}
-
-  call-deploy-abstraction:
-    if: contains(github.ref, 'refs/tags/Abstraction-v')
-    needs: call-build-test
-    permissions:
-      packages: write
-    uses: Vectron/GithubWorkflows/.github/workflows/DeployNugetGithub.yml@main
-    with:
-      os: ubuntu-latest
-      dotnet_version: 8.0.x
-      solution_file: src/Vectron.Extensions.DependencyInjection.Abstraction/Vectron.Extensions.DependencyInjection.Abstraction.csproj
-    secrets:
-      NUGET_KEY: ${{ secrets.NUGET_KEY }}
-
-  call-deploy-di:
-    if: contains(github.ref, 'refs/tags/DI-v')
-    needs: call-build-test
-    permissions:
-      packages: write
-    uses: Vectron/GithubWorkflows/.github/workflows/DeployNugetGithub.yml@main
-    with:
-      os: ubuntu-latest
-      dotnet_version: 8.0.x
-      solution_file: src/Vectron.Extensions.DependencyInjection/Vectron.Extensions.DependencyInjection.csproj
-    secrets:
-      NUGET_KEY: ${{ secrets.NUGET_KEY }}
-      
 
   call-release:
     needs: call-build-test
