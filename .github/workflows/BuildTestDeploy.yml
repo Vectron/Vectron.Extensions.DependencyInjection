@@ -51,10 +51,13 @@ jobs:
       matrix:
         include:
           - project: Vectron.Extensions.DependencyInjection.sln
+            path: ""
             condition: ${{ github.ref == 'refs/heads/main' }}
-          - project: src/Vectron.Extensions.DependencyInjection.Abstraction/Vectron.Extensions.DependencyInjection.Abstraction.csproj
+          - project: Vectron.Extensions.DependencyInjection.Abstraction.csproj
+            path: src/Vectron.Extensions.DependencyInjection.Abstraction/
             condition: ${{ startsWith(github.ref, 'refs/tags/Abstraction-v') }}
-          - project: src/Vectron.Extensions.DependencyInjection/Vectron.Extensions.DependencyInjection.csproj
+          - project: Vectron.Extensions.DependencyInjection.csproj
+            path: src/Vectron.Extensions.DependencyInjection/
             condition: ${{ startsWith(github.ref, 'refs/tags/DI-v') }}
       fail-fast: true
     permissions:
@@ -68,6 +71,7 @@ jobs:
         8.0.x
       solution_file: ${{ matrix.project }}
       run_condition: ${{ matrix.condition }}
+      solution_directory: ${{ matrix.path }}
     secrets:
       NUGET_KEY: ${{ secrets.NUGET_KEY }}
 
