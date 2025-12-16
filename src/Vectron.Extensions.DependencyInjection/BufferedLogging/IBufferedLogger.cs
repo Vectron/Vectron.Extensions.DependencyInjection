@@ -13,5 +13,5 @@ public interface IBufferedLogger
     /// Write all items to the given <see cref="ILogger"/>.
     /// </summary>
     /// <param name="logger">An <see cref="ILogger"/> instance used for logging.</param>
-    void WriteItems(ILogger logger);
+    public void WriteItems(ILogger logger);
 }

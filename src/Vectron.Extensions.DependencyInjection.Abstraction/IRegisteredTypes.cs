@@ -9,7 +9,7 @@ public interface IRegisteredTypes<T>
     /// <summary>
     /// Gets the list of items that inherit from <typeparamref name="T"/>.
     /// </summary>
-    IEnumerable<Type> Items
+    public IEnumerable<Type> Items
     {
         get;
     }
