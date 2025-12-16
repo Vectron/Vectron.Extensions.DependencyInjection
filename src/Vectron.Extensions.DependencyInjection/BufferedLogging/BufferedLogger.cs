@@ -23,7 +23,7 @@ public class BufferedLogger<T> : ILogger<T>, IBufferedLogger
         /// Log item to the given logger.
         /// </summary>
         /// <param name="logger">The <see cref="ILogger"/> where the item needs to be written.</param>
-        void Log(ILogger logger);
+        public void Log(ILogger logger);
     }
 
     /// <inheritdoc/>

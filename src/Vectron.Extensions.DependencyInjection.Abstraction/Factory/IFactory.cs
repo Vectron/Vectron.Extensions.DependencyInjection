@@ -10,7 +10,7 @@ public interface IFactory<T>
     /// <summary>
     /// Gets the default implementation.
     /// </summary>
-    T Value
+    public T Value
     {
         get;
     }
@@ -19,12 +19,12 @@ public interface IFactory<T>
     /// Get a <see cref="IEnumerable{T}"/> with all possible type names this factory can create.
     /// </summary>
     /// <returns>A <see cref="IEnumerable{T}"/>.</returns>
-    IEnumerable<string> GetItemNames();
+    public IEnumerable<string> GetItemNames();
 
     /// <summary>
     /// Gets a Type instance by name.
     /// </summary>
     /// <param name="name">The type name to instantiate.</param>
     /// <returns>The instance of the type.</returns>
-    T GetValue(string name);
+    public T GetValue(string name);
 }

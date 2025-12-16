@@ -14,11 +14,11 @@ public interface IBufferedLoggerFactory
     /// </summary>
     /// <typeparam name="T">The type who's name is used for the logger category name.</typeparam>
     /// <returns>A <see cref="ILogger{TCategoryName}"/>.</returns>
-    ILogger<T> CreateLogger<T>();
+    public ILogger<T> CreateLogger<T>();
 
     /// <summary>
     /// Log all values to the Logger setup in the <see cref="IServiceProvider"/>.
     /// </summary>
     /// <param name="serviceProvider">The <see cref="IServiceProvider"/> to get the real loggers from.</param>
-    void LogAll(IServiceProvider serviceProvider);
+    public void LogAll(IServiceProvider serviceProvider);
 }
