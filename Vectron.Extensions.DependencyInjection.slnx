@@ -1,0 +1,30 @@
+<Solution>
+  <Folder Name="/.github/">
+    <File Path=".github/dependabot.yml" />
+    <File Path=".github/release.yml" />
+  </Folder>
+  <Folder Name="/.github/workflows/">
+    <File Path=".github/workflows/BuildTestDeploy.yml" />
+    <File Path=".github/workflows/DependabotAutoMerge.yml" />
+  </Folder>
+  <Folder Name="/Solution Items/">
+    <File Path=".editorconfig" />
+    <File Path=".gitattributes" />
+    <File Path=".gitignore" />
+    <File Path=".runsettings" />
+    <File Path="Directory.Build.props" />
+    <File Path="LICENSE.txt" />
+    <File Path="README.md" />
+    <File Path="version.json" />
+  </Folder>
+  <Folder Name="/src/">
+    <Project Path="src/Vectron.Extensions.DependencyInjection.Abstraction/Vectron.Extensions.DependencyInjection.Abstraction.csproj" />
+    <Project Path="src/Vectron.Extensions.DependencyInjection/Vectron.Extensions.DependencyInjection.csproj" />
+  </Folder>
+  <Folder Name="/test/">
+    <File Path="test/.editorconfig" />
+    <File Path="test/Directory.Build.props" />
+    <Project Path="test/Vectron.Extensions.DependencyInjection.Tests/Vectron.Extensions.DependencyInjection.Tests.csproj" />
+    <Project Path="test/Vectron.Extensions.DependencyInjection.TestsAssembly/Vectron.Extensions.DependencyInjection.TestsAssembly.csproj" />
+  </Folder>
+</Solution>
